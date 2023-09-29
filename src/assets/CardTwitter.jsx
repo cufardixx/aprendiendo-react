@@ -1,11 +1,17 @@
 //importat hooks q funcionan como la memoria para recordar estados en componentes
 import { useState } from "react"
 
-export function CardTwitter({name, user, isFollow}){
+export function CardTwitter({name, user}){
 
     const [isFollow, setIsFollow] = useState(false)
 
-    const text = isFollow ? 'Siuiendo' : 'Seguir'
+    const handleClick = () =>{
+        setIsFollow(!isFollow)
+    }
+
+    const text = isFollow ? 'Siuiendo' : 'Seguir' 
+    
+    
     const classNameButton = isFollow 
     ? 'card-aside-boton is-follow'
     : 'card-aside-boton'
@@ -21,7 +27,7 @@ export function CardTwitter({name, user, isFollow}){
             </header>
 
             <aside className="card-aside">
-                <button className={classNameButton}>{text}</button>
+                <button className={classNameButton} onClick={handleClick}>{text}</button>
             </aside>
         </article>
     )

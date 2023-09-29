@@ -5,9 +5,9 @@ export function App (){
     return(
         
         <div className="app">
-            <CardTwitter isFollow={false} user={'facundopicia'} name={'Facundo Picia'}/>
-            <CardTwitter isFollow user={'florpicia'} name={'Queen F'}/>
-            <CardTwitter isFollow user={'blaasfacundo'} name={'BF'}/>
+            <CardTwitter  user={'facundopicia'} name={'Facundo Picia'}/>
+            <CardTwitter  user={'florpicia'} name={'Queen F'}/>
+            <CardTwitter  user={'blaasfacundo'} name={'BF'}/>
         </div>
     )
 }
