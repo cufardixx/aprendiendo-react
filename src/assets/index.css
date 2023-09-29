@@ -4,8 +4,13 @@
     align-items: center;
     font-size: .8rem;
     justify-content: space-between;
+    min-width: 350px;
+    padding: 5px 25px;
 }
 
+.card-articulo:hover{
+    background-color: #bbbbbb0a;
+}
 
 .card-img{
     width: 48px;
@@ -36,23 +41,46 @@
 
 }
 
+.follow-text{
+    display: block;
+}
+
 .card-aside-boton{
     cursor: pointer;
     margin-left: 16px;
-    border: 1px solid black;
+    border: none;
     border-radius: 999px;
     padding: 6px 16px;
     font-weight: bold;
-    transition: .3s ease background-color;
+    transition: .2s all;
 }
 
 .card-aside-boton:hover{
-    opacity: 0.8;
+    background: #bbb;
 }
 
 .card-aside-boton.is-follow{
     background-color: #222;
     color: #fff;
     border: 1px solid #fff;
+    width: 140px;
 }
 
+.card-aside-boton.is-follow:hover{
+    background-color: rgba(255, 102, 102, 0.24);
+    color: rgb(255, 33, 33);
+    border: 1px solid rgb(194, 0, 0);
+}
+
+
+.card-aside-boton.is-follow:hover .follow-text{
+    display: none;
+}
+
+.card-aside-boton.is-follow:hover .unfollow{
+    display:block;
+}
+
+.unfollow{
+    display: none;
+}
